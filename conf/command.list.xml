@@ -1,0 +1,8 @@
+<amalgam>
+	<module>
+		<command>listDirectory</command>
+		<linux>ls -lt</linux>
+		<windows>dir</windows>
+		<mac>????</mac>
+	<module/>
+</amalgam>

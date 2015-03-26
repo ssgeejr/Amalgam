@@ -1,0 +1,14 @@
+#!/bin/bash
+clear
+if [ -f ../lib/hsqldb.jar ]; then
+	echo "--Starting the Database--"
+	workingDIR=`pwd`
+	cd ../
+	java -cp lib/hsqldb.jar org.hsqldb.Server -database database/amalgam -dbname amalgam
+	cd $workingDIR
+else
+	echo "--- Hypersonic Database Jar file -NOT FOUND- ---"
+	echo "Please download the jar file from: http://hsqldb.sourceforge.net"
+	echo "     and move hsqldb.jar to \$AMALGAM_HOME\lib\\"
+fi
+

@@ -1,0 +1,43 @@
+<amalgam>
+	<modules>
+<!-- KEY
+name="unique name of each module"
+display-name="Name the Admin Client will see"
+class="The class to instantiate on the call"
+definition="Small definition of the modules purpose"
+arg0="arugment list that will be passed to each module"
+arg1="second arugment list that will be passed to each module"
+arg[n]="any given number of arguements to be passed to the admin client"
+-->
+		<module
+			name="listDirectory"
+			display-name="List Directory"
+			class="amalgam.modules.ListDirectory"
+			definition="List a directory on the remote system"
+			arg0="Directory"
+		/>
+		<module
+			name="fetchFile"
+			display-name="Fetch File"
+			class="amalgam.modules.FetchFile"
+			definition="List a directory on the remote system"
+			arg0="Directory"
+			arg1="File"
+			arg2="Time"
+			arg3="User"
+		/>
+		<module
+			name="pushFile"
+			display-name="Push File"
+			class="amalgam.modules.PushFile"
+                        priority="50"
+			definition="List a directory on the remote system"
+		/>
+		<module
+			name="settlement"
+			display-name="Daily Settlement"
+			class="amalgam.modules.settlement"
+			definition="Run Settlement daily at 2:30"
+		/>
+	</modules>
+</amalgam>

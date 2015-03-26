@@ -1,0 +1,16 @@
+package amalgam.modules;
+
+import amalgam.util.Module;
+
+public class ListDirectory implements ModuleInterface{
+    public Module execute(Module mod){
+      try{
+
+      }catch(Exception ex){
+        mod.setErrorMsg("Failed execuing: " + mod.getModName());
+        mod.setException(ex);
+      }
+
+    return null;
+  }
+}

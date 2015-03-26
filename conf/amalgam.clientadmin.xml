@@ -1,0 +1,24 @@
+<amalgam>
+	<adminclient>
+		<server>10.8.20.176</server>
+		<port>8005</port>
+	</adminclient>
+    <logging>
+<!-- Enabled true/false -->
+        <enabled>true</enabled>
+<!-- Location to place the log file -->
+        <log-file>log/amalgam_admin.log</log-file>
+<!-- Class to map the logfile to -->
+        <log-class>amalgam.adminclient.AmalgamUI</log-class>
+<!--  Log Levels are identical to the java.util.logging.Level (excluding CONFIG)
+# SEVERE (highest value)
+# WARNING
+# INFO
+# FINE
+# FINER
+# FINEST (lowest value)
+-->
+    	<log-level>INFO</log-level>
+    </logging>
+
+</amalgam>

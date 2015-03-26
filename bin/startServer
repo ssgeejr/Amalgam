@@ -1,0 +1,13 @@
+#Amalgam: Cross Platform Aministration (2005)
+#        -h,--help       Help Message (this one)
+#        -s,--server     Start the Server
+#        -c,--client     Start a client instance
+#        -a,--admin      Start the Admin Client (default)
+
+#!/bin/bash
+clear
+echo "--STARTING SERVER (shell)--"
+workingDIR=`pwd`
+cd ../
+java -jar  jar/amalgam.jar -s
+cd $workingDIR

@@ -1,0 +1,28 @@
+package amalgam.adminclient;
+
+import java.util.*;
+import java.net.*;
+
+public class ServerCommunictionManager extends Thread {
+
+  private final String serverHost;
+  private final int serverPort;
+
+  public ServerCommunictionManager(String host, int port) throws Exception{
+    serverHost = host;
+    serverPort = port;
+  }
+
+  public ServerCommunictionManager(String host, String port) throws Exception{
+    serverHost = host;
+    serverPort = Integer.parseInt(port);
+  }
+
+  public void run(){
+
+  }
+
+
+
+
+}

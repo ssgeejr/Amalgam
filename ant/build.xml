@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<project name="amalgam" default="jar">
+  <description>
+     Build and Deploy a version of Amalgam
+  </description>
+
+  <property name="build.compiler" 	value="jikes"/>
+  <property name="SOURCE"   		value="/usr/local/beans/amalgam/src"/>
+  <property name="COMPILE.DIR"      value="/usr/local/beans/amalgam/classes"/>
+  <property name="JAR.FILE"      	value="/usr/local/beans/amalgam/jar/amalgam.jar" />
+  <property name="MAIN.CLASS"      	value="amalgam.AmalgamMain" />
+
+<!--  <property name="CLASSPATH"      	value="/usr/local/beans/amalgam/lib/hsqldb.jar" />  -->
+
+ <property name="USER.NAME"      	value="Steve Gee"/>
+ <property name="USER.EMAIL"      	value="ioexcept@gmail.com"/>
+
+ <target name="all" depends="clean, jar"/>
+
+ <target name="clean" description="Wipe out the local working copy">
+    <mkdir dir="${COMPILE.DIR}"/>
+    <delete includeemptydirs="true">
+    	<fileset dir="${COMPILE.DIR}" includes="**/*"/>
+    </delete>
+	<delete file="${JAR.FILE}"/>
+
+  </target>
+
+ <target name="compile" depends="clean" description="Compile the source">
+   	<javac srcdir="${SOURCE}"
+           destdir="${COMPILE.DIR}"
+           includes="*/**"
+  	/>
+ </target>
+
+  <target name="jar" depends="compile" description="jar the source">
+    <jar jarfile="${JAR.FILE}"
+  	     basedir="${COMPILE.DIR}"
+             includes="*/**">
+	     <manifest>
+	           <attribute name="Built-By"   value="${USER.NAME}"/>
+	           <attribute name="user-Email" value="${USER.EMAIL}"/>
+	           <attribute name="main-class" value="${MAIN.CLASS}"/>
+	     </manifest>
+	  </jar>
+  </target>
+</project>

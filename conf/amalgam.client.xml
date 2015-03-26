@@ -1,0 +1,32 @@
+<amalgam>
+        <client>
+<!-- Client name MUST be unique -->
+		<name>testPlatform</name>
+        </client>
+	<server>
+		<host>10.8.20.176</host>
+		<port>8005</port>
+	</server>
+        <modules>
+		<modules>./conf/modules.xml</modules>
+		<use-custom-mods>true</use-custom-mods>
+		<custom-modules>./modules/custom-modules.xml</custom-modules>
+        </modules>
+        <logging>
+<!-- Enabled true/false -->
+          <enabled>false</enabled>
+<!-- Location to place the log file -->
+          <log-file>log/amalgam_clent.log</log-file>
+<!-- Class to map the logfile to -->
+          <log-class>amalgam.client.AmalgamClient</log-class>
+<!--  Log Levels are identical to the java.util.logging.Level (excluding CONFIG)
+# SEVERE (highest value)
+# WARNING
+# INFO
+# FINE
+# FINER
+# FINEST (lowest value)
+-->
+          <log-level>INFO</log-level>
+        </logging>
+</amalgam>

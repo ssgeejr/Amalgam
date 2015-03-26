@@ -1,0 +1,29 @@
+<amalgam>
+	<server>
+		<port>8005</port>
+	</server>
+        <database>
+          <driver>org.hsqldb.jdbcDriver</driver>
+<!--          <url>jdbc:hsqldb:database/amalgam</url> -->
+          <url>jdbc:hsqldb:hsql://localhost</url>
+          <username>sa</username>
+          <password></password>
+        </database>
+        <logging>
+<!-- Enabled true/false -->
+          <enabled>true</enabled>
+<!-- Location to place the log file -->
+          <log-file>log/amalgam_server.log</log-file>
+<!-- Class to map the logfile to -->
+          <log-class>amalgam.util.LoggingProxy</log-class>
+<!--  Log Levels are identical to the java.util.logging.Level (excluding CONFIG)
+# SEVERE (highest value)
+# WARNING
+# INFO
+# FINE
+# FINER
+# FINEST (lowest value)
+-->
+          <log-level>INFO</log-level>
+        </logging>
+</amalgam>

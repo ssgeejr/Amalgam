@@ -1,0 +1,8 @@
+<amalgam>
+	<database>
+		<url>jdbc:oracle:thin:@10.8.21.18:1521:termact</url>
+		<driver>oracle.jdbc.OracleDriver</driver>
+		<username>amalgam</username>
+		<password>amalgam</password>
+	</database>
+</amalgam>
